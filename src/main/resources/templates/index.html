@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Siri Makeovers — Warangal</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header-card">
+    <div class="krishna-wrap" aria-hidden="true">
+      <div class="krishna" id="krishna">
+        <img src="/images/little-krishna.svg" alt="Little Krishna" style="width:100%; height:auto; display:block;">
+        <div class="board" aria-hidden="true">
+          <span>Siri Makeovers — Warangal</span>
+          <div class="plain" style="display:none;">Siri Makeovers — Warangal</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1>Siri Makeovers — Warangal</h1>
+      <p>Elegant • Traditional • Glamorous</p>
+      <p class="contact">Contact: 9959565969 | 9550616967</p>
+      <div class="nav">
+        <a href="/" class="active">Home</a>
+        <a href="/services">Services</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/booking">Booking</a>
+      </div>
+      <div class="services">
+        <div class="service">Bridal Makeup</div>
+        <div class="service">Fashion / Editorial</div>
+        <div class="service">Salon Services</div>
+        <div class="service">Beauty &amp; Grooming</div>
+      </div>
+      <div style="margin-top:12px;">
+        <a class="btn" href="/services" style="text-decoration:none;padding:10px 16px;background:#b30059;color:white;border-radius:8px;">View Services</a>
+        <a class="btn" href="/booking" style="text-decoration:none;padding:10px 16px;background:#b30059;color:white;border-radius:8px;margin-left:8px;">Book Now</a>
+      </div>
+      <p style="margin-top:12px;">Follow us on Instagram: <strong>@SIRI_MAKEOVERS.WARANGAL</strong></p>
+    </div>
+  </header>
+  <main class="card">
+    <h2>Welcome!</h2>
+    <p>We specialize in traditional Indian bridal looks, glamorous editorial makeup, and professional salon services in Warangal.</p>
+    <h3>Why choose us?</h3>
+    <ul>
+      <li>Experienced makeup artists</li>
+      <li>On-site bridal services</li>
+      <li>Personalized consultations</li>
+    </ul>
+  </main>
+  <footer class="footer">Made with ♥ for Siri Makeovers — OpenJDK 17 / Spring Boot</footer>
+
+  <script>
+    window.addEventListener('load', function(){
+      setTimeout(function(){
+        var k = document.getElementById('krishna');
+        if(k) k.classList.add('active');
+      }, 1500);
+    });
+  </script>
+</body>
+</html>

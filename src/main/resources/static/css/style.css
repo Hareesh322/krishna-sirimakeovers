@@ -1,0 +1,53 @@
+/* style.css - includes Krishna walk animation and site styling */
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fff6f6; color:#333; }
+.header-card { background: linear-gradient(90deg, #fff0f6, #fff6f0); padding:24px; text-align:center; position:relative; overflow:visible; }
+.nav { display:flex; gap:12px; justify-content:center; margin:12px 0; }
+.nav a { text-decoration:none; padding:8px 12px; border-radius:8px; background:#fff; color:#b30059; font-weight:600; }
+.card { max-width:900px; margin:20px auto; background:white; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); padding:28px; }
+h1 { margin:0 0 8px; color:#b30059; }
+.services { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+.service { background:#fff0f6; padding:10px 14px; border-radius:8px; margin:6px; }
+.footer { text-align:center; font-size:13px; color:#666; margin:20px 0; }
+
+/* Krishna animation container */
+.krishna-wrap { position: absolute; top: -40px; left: 0; right: 0; height: 120px; pointer-events: none; z-index: 50; overflow: visible; }
+/* Krishna element */
+.krishna { position: absolute; top: 10px; left: -160px; width: 120px; height: auto; transform-origin: center bottom; opacity: 0; }
+/* Board attached to Krishna (golden) */
+.krishna .board { position: absolute; left: 60px; top: 10px; background: linear-gradient(180deg,#ffd54f,#ffb300); border-radius:6px; padding:6px 10px; color:#b30059; font-weight:700; font-family: 'Segoe UI', Roboto, Arial; box-shadow:0 6px 10px rgba(0,0,0,0.12); transform-origin: left center; }
+/* small decorative pink text style */
+.krishna .board span { color:#fff0f6; background: linear-gradient(90deg,#ffd9e6,#ffb3d1); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight:800; font-size:14px; -webkit-text-fill-color: transparent; }
+/* board inner text (fallback) */
+.krishna .board .plain { color:#b30059; font-weight:800; font-size:14px; }
+
+/* fade-in then walk animation (1.5s delay) */
+@keyframes krishna-walk {
+  0% { left: -160px; transform: translateY(0) scale(1); }
+  10% { transform: translateY(-4px) scale(1.01); }
+  25% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-6px) scale(1.02); }
+  75% { transform: translateY(0) scale(1); }
+  100% { left: 110%; transform: translateY(0) scale(1); }
+}
+
+/* subtle swing for board */
+@keyframes board-swing {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-6deg); }
+  50% { transform: rotate(4deg); }
+  75% { transform: rotate(-3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* applied when active */
+.krishna.active { animation: krishna-walk 12s linear infinite; opacity: 1; }
+/* swing the board */
+.krishna.active .board { animation: board-swing 1.2s ease-in-out infinite; transform-origin: left center; }
+
+/* responsive tweaks */
+@media (max-width:600px) {
+  .krishna { width: 86px; }
+  .krishna .board { left: 48px; top: 6px; padding:5px 8px; }
+  .krishna .board span { font-size:12px; }
+  .krishna-wrap { top: -36px; height:90px; }
+}

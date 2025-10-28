@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="skin" x1="0" x2="1"><stop offset="0" stop-color="#ffd9b3"/><stop offset="1" stop-color="#ffc18a"/></linearGradient>
+    <linearGradient id="cloth" x1="0" x2="1"><stop offset="0" stop-color="#7ec8a8"/><stop offset="1" stop-color="#37a68c"/></linearGradient>
+    <linearGradient id="peacock" x1="0" x2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient>
+  </defs>
+  <g transform="translate(40,20)">
+    <circle cx="60" cy="40" r="28" fill="url(#skin)" stroke="#c87a4a" stroke-width="1"/>
+    <path d="M60 25 q6 12 -6 22" fill="#ffb3d1" />
+    <g transform="translate(88,8) rotate(-20)">
+      <path d="M0 0 q18 -6 30 10 q-10 18 -30 10 z" fill="url(#peacock)"/>
+      <circle cx="18" cy="6" r="4" fill="#ffdd57" />
+    </g>
+    <rect x="20" y="46" width="44" height="6" rx="3" fill="#c49a6c" transform="rotate(-12 20 46)"/>
+  </g>
+  <g transform="translate(0,90)">
+    <path d="M90 10 q30 60 60 0 q-10 -18 -40 -18 q-20 6 -20 18 z" fill="url(#cloth)" stroke="#2b6b5a" stroke-width="1"/>
+    <path d="M95 30 q40 -6 80 0" stroke="#ffd9b3" stroke-width="10" stroke-linecap="round" fill="none" transform="rotate(-6 95 30)"/>
+  </g>
+  <g transform="translate(30,170)">
+    <path d="M20 0 q12 30 28 0" stroke="#c49a6c" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <path d="M60 0 q-8 30 -26 0" stroke="#c49a6c" stroke-width="10" stroke-linecap="round" fill="none"/>
+  </g>
+  <ellipse cx="60" cy="12" rx="36" ry="8" fill="rgba(255,213,79,0.08)"/>
+</svg>
